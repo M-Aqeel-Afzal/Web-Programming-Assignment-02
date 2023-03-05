@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Editor JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="styleB.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+  </head>
+  <body>
+
+    <div class="container">
+        <h2> Photo Editor</h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title" align="center">Filters Settings</label>
+                    <div class="slider">
+                      <div class="filter1">
+                 <label for="blur">Blur</label>
+                 <input type="range" min="0" max="20" value="0" step="0.1" id="blur">
+             </div>
+             <div class="filter1">
+                 <label for="contrast">Contrast</label>
+                 <input type="range" min="0" max="200" value="100" id="contrast">
+             </div>
+             <div class="filter1">
+                 <label for="hue-rotate">Hue-Rotate</label>
+                 <input type="range" min="0" max="360" value="0" id="hue-rotate">
+             </div>
+             <div class="filter1">
+                 <label for="sepia">Sepia</label>
+                 <input type="range" min="0" max="200" value="100" id="sepia">
+             </div>
+             <br>
+                    <label class="title" align="center">Flip Settings</label>
+                  </div>
+                    <div class="flip-buttons">
+               <div class="flip-option">
+                   <input type="radio" name="flip" id="no-flip" checked>
+                   <label for="no-flip">No Flip</label>
+               </div>
+               <div class="flip-option">
+                   <input type="radio" name="flip" id="flip-x">
+                   <label for="flip-x">Flip Horizontal</label>
+               </div>
+               <div class="flip-option">
+                   <input type="radio" name="flip" id="flip-y">
+                   <label for="flip-y">Flip Vertical</label>
+               </div>
+           </div>
+                </div>
+            </div>
+            <div class="preview-img">
+              <figure class="image-container">
+                      <img id="chosen-image" src="image-placeholder.svg" alt="preview-img" >
+                  </figure>
+
+            </div>
+        </div>
+
+
+        <div class="controls">
+            <button class="reset-filter">Reset Filters</button>
+            <div class="row">
+                <input type="file" class="file-input" id="upload-button" accept="image/*" >
+                <button class="choose-img" hidden>Choose Image</button>
+                <button for="upload-button" class="save-img">Save Image</button>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="code.js"></script>
+
+  </body>
+</html>
